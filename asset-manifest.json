@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a0f45880.css",
+    "main.js": "/static/js/main.7200d964.js",
+    "static/js/453.c0a325ea.chunk.js": "/static/js/453.c0a325ea.chunk.js",
+    "static/media/stationery.webp": "/static/media/stationery.cb18238fc8fdbbef8c66.webp",
+    "static/media/computers.png": "/static/media/computers.30393608018b32605bb0.png",
+    "static/media/orgtech.webp": "/static/media/orgtech.ab04591e49ca035a2631.webp",
+    "static/media/laptops.png": "/static/media/laptops.2cda2c932583d691f36f.png",
+    "static/media/furniture.webp": "/static/media/furniture.e6370af23c6453ac74ca.webp",
+    "static/media/accessories.png": "/static/media/accessories.265325606764317f49a5.png",
+    "static/media/printing.png": "/static/media/printing.4e6ea2e6559030f55e61.png",
+    "static/media/logo.png": "/static/media/logo.659cdfcab0972d08956f.png",
+    "static/media/networking.png": "/static/media/networking.61be1df58de2cc45a7a1.png",
+    "index.html": "/index.html",
+    "main.a0f45880.css.map": "/static/css/main.a0f45880.css.map",
+    "main.7200d964.js.map": "/static/js/main.7200d964.js.map",
+    "453.c0a325ea.chunk.js.map": "/static/js/453.c0a325ea.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0f45880.css",
+    "static/js/main.7200d964.js"
+  ]
+}
