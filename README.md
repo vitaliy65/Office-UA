@@ -78,6 +78,6 @@ Office UA - це сучасний веб-додаток для інтернет-
 
 ## Скріншоти
 
-![Головна сторінка](./public/homepage.png)
-![Сторінка товарів](./public/products.png)
-![Кошик](./public/cart.png)
+![Головна сторінка](./public/mainPage.jpg)
+![Сторінка товарів](./public/Productspage.jpg)
+![Контакти](./public/ContactsPage.jpg)
