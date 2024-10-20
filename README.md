@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Office UA - Інтернет-магазин офісного обладнання
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Office UA - це сучасний веб-додаток для інтернет-магазину офісного обладнання, розроблений з використанням React та інших сучасних веб-технологій.
 
-## Available Scripts
+## Особливості
 
-In the project directory, you can run:
+- Перегляд каталогу товарів
+- Детальна інформація про товар
+- Функціональний кошик для покупок
+- Система оформлення замовлення
+- Адаптивний дизайн для різних пристроїв
+
+## Технології
+
+- React
+- React Router для навігації
+- Context API для управління станом
+- Tailwind CSS для стилізації
+
+## Встановлення
+
+1. Клонуйте репозиторій:
+   ```
+   git clone https://github.com/your-username/office-ua.git
+   ```
+
+2. Перейдіть до директорії проекту:
+   ```
+   cd office-ua
+   ```
+
+3. Встановіть залежності:
+   ```
+   npm install
+   ```
+
+4. Запустіть проект:
+   ```
+   npm start
+   ```
+
+Додаток буде доступний за адресою [http://localhost:3000](http://localhost:3000).
+
+## Структура проекту
+
+- `src/components/` - React компоненти
+- `src/contexts/` - React контексти (наприклад, CartContext)
+- `src/data/` - Статичні дані (наприклад, список товарів)
+- `src/styles/` - CSS стилі
+
+## Доступні скрипти
+
+У директорії проекту ви можете виконати:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Запускає додаток у режимі розробки.
+Відкрийте [http://localhost:3000](http://localhost:3000) для перегляду в браузері.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Запускає тестовий раннер в інтерактивному режимі.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Збирає додаток для продакшену в папку `build`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Контакти
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Якщо у вас виникли питання або пропозиції, будь ласка, зв'яжіться з нами:
 
-### `npm run eject`
+- Email: info@officeua.com
+- Телефон: +38 (044) 123-4567
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Ліцензія
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Цей проект ліцензований під [MIT License](LICENSE).
