@@ -1,10 +1,11 @@
 import {React, useState} from 'react'
-import logo from '../images/logo.png'
 import { Link } from 'react-router-dom'
 import { SearchIcon, ShoppingCartIcon } from 'lucide-react'
+import { useCart } from '../contexts/CartContext'
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState('')
+  const {itemCount} = useCart()
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -15,7 +16,7 @@ export default function Header() {
     <header className="border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} alt="Office UA Logo" className="w-10 h-10" />
+          <img src="/images/logo.png" alt="Office UA Logo" className="w-10 h-10" />
           <span className="text-xl font-bold">Office UA</span>
         </Link>
         {/* Нові посилання навігації */}
@@ -46,7 +47,7 @@ export default function Header() {
         <Link to="/cart" className="flex items-center space-x-1 text-sm">
           <ShoppingCartIcon className="h-5 w-5" />
           <span>Кошик</span>
-          <span className="bg-blue-500 text-white rounded-full px-2 py-1 text-xs">0</span>
+          <span className="bg-blue-500 text-white rounded-full px-2 py-1 text-xs">{itemCount}</span>
         </Link>
       </div>
     </header>

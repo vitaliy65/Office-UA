@@ -1,14 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import computers from '../images/computers.png'
-import laptops from '../images/laptops.png'
-import printing from '../images/printing.png'
-import officeEquipment from '../images/orgtech.webp'
-import furniture from '../images/furniture.webp'
-import stationery from '../images/stationery.webp'
-import networking from '../images/networking.png'
-import accessories from '../images/accessories.png' 
-
 
 export default function HomePage() {
   return (
@@ -64,12 +55,12 @@ export default function HomePage() {
 }
 
 const categories = [
-  { id: 'computers', name: 'Комп\'ютери', image: computers },
-  { id: 'laptops', name: 'Ноутбуки', image: laptops },
-  { id: 'printing', name: 'Друкарська техніка', image: printing },
-  { id: 'office-equipment', name: 'Оргтехніка', image: officeEquipment },
-  { id: 'furniture', name: 'Меблі для офісу', image: furniture },
-  { id: 'stationery', name: 'Канцелярія', image: stationery },
-  { id: 'networking', name: 'Мережеве та серверне обладнання', image: networking },
-  { id: 'accessories', name: 'Аксесуари та комплектуючі', image: accessories },
+  { id: 'computers', name: 'Комп\'ютери', image: "/images/computers.png" },
+  { id: 'laptops', name: 'Ноутбуки', image: "/images/laptops.png"  },
+  { id: 'printing', name: 'Друкарська техніка', image: "/images/printing.png" },
+  { id: 'office-equipment', name: 'Оргтехніка', image: "/images/orgtech.webp" },
+  { id: 'furniture', name: 'Меблі для офісу', image: "/images/furniture.webp" },
+  { id: 'stationery', name: 'Канцелярія', image: "/images/stationery.webp" },
+  { id: 'networking', name: 'Мережеве та серверне обладнання', image: "/images/networking.png" },
+  { id: 'accessories', name: 'Аксесуари та комплектуючі', image: "/images/accessories.png" },
 ];

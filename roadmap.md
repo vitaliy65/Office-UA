@@ -4,7 +4,7 @@
 This project aims to create an e-commerce website for selling office equipment, featuring a user-friendly interface, functional product navigation, and an efficient checkout process.
 
 ## Features Breakdown
-1. **Homepage** ✓
+1. **Homepage ✓**
    - Logo display
    - Search bar for products
    - Shopping cart icon with item count
@@ -12,19 +12,19 @@ This project aims to create an e-commerce website for selling office equipment, 
    - Product promotion banners
    - Product categories section
 
-2. **Product Listing Page** ✓
+2. **Product Listing Page ✓**
    - Display of all available products
    - Filtering options (e.g., category, price range, brand)
    - Sorting options (e.g., price, popularity, rating)
    - Search functionality
 
-3. **Product Detail Page**
+3. **Product Detail Page ✓**
    - Displays when a product is clicked
    - Product images, descriptions, and specifications
    - Pricing and availability information
    - "Add to Cart" button
 
-4. **Cart Slide-In Panel**
+4. **Cart Slide-In Panel ✓**
    - Appears from the right side
    - Lists items added to the cart
    - Includes total price and quantity controls
@@ -37,17 +37,17 @@ This project aims to create an e-commerce website for selling office equipment, 
    - Submit button for order processing
 
 ## Development Phases
-### Phase 1: Planning & Setup
+### Phase 1: Planning & Setup ✓
 - Define project structure
 - Set up version control (Git)
 - Choose technology stack (e.g., HTML, CSS, JavaScript, React)
 
-### Phase 2: Basic Structure & Layout
+### Phase 2: Basic Structure & Layout ✓
 - Create initial website layout
 - Implement homepage with static components
 - Set up navigation between pages
 
-### Phase 3: Functionality Development
+### Phase 3: Functionality Development ✓
 - Add product search and filtering on the listing page
 - Implement product detail pages with dynamic content
 - Develop the cart system with a slide-in panel
