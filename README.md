@@ -75,3 +75,9 @@ Office UA - це сучасний веб-додаток для інтернет-
 ## Ліцензія
 
 Цей проект ліцензований під [MIT License](LICENSE).
+
+## Скріншоти
+
+![Головна сторінка](./public/homepage.png)
+![Сторінка товарів](./public/products.png)
+![Кошик](./public/cart.png)

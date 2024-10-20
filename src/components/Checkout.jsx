@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
-
 export default function Checkout() {
   const { cart, clearCart } = useCart();
   const [formData, setFormData] = useState({
@@ -62,15 +61,24 @@ export default function Checkout() {
         </div>
         <div className="md:w-1/2">
           <h2 className="text-2xl font-semibold mb-4 text-center">Ваші дані</h2>
-          {isSubmitted && (
-            <div className="mb-4 p-3 bg-green-100 text-green-700 rounded">
-              Ваше замовлення успішно відправлено!
+          {isSubmitted ? (
+            <div className="flex flex-col">
+              <div className="mb-4 p-3 bg-green-100 text-green-700 rounded">
+                Ваше замовлення успішно відправлено!
+              </div>
+              <div className="flex-grow" style={{ minHeight: '365px' }}></div>
+              <Link
+                to="/products"
+                className="block w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors text-center"
+              >
+                До товарів
+              </Link>
             </div>
-          )}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="firstName" className="block mb-1">Ім'я</label>
-              <input
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="firstName" className="block mb-1">Ім'я</label>
+                <input
                 type="text"
                 id="firstName"
                 name="firstName"
@@ -79,62 +87,63 @@ export default function Checkout() {
                 required
                 className="w-full px-3 py-2 border rounded"
               />
-            </div>
-            <div>
-              <label htmlFor="lastName" className="block mb-1">Прізвище</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 border rounded"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block mb-1">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 border rounded"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block mb-1">Телефон</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 border rounded"
-              />
-            </div>
-            <div>
-              <label htmlFor="address" className="block mb-1">Адреса</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 border rounded"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-            >
-              Оформити замовлення
-            </button>
-          </form>
+              </div>
+              <div>
+                <label htmlFor="lastName" className="block mb-1">Прізвище</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block mb-1">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block mb-1">Телефон</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded"
+                />
+              </div>
+              <div>
+                <label htmlFor="address" className="block mb-1">Адреса</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+              >
+                Оформити замовлення
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>
