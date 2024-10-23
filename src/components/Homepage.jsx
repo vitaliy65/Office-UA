@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function HomePage() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? sliderImages.length - 1 : prevIndex - 1))
+  }, [])
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1))
+  }, [])
+
+  useEffect(() => {
+    const intervalId = setInterval(goToNext, 6000)
+    return () => clearInterval(intervalId)
+  }, [goToNext])
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Banner with site description */}
@@ -13,26 +29,49 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Product promotion banners */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Featured Promotions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-yellow-100 rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-2">Summer Sale!</h3>
-            <p className="mb-4">Get up to 30% off on all stationery items.</p>
-            <Link to="/sale" className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors">
-              Shop Now
-            </Link>
-          </div>
-          <div className="bg-green-100 rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-2">New Arrivals</h3>
-            <p className="mb-4">Check out our latest ergonomic office chairs.</p>
-            <Link to="/new-arrivals" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
-              Explore
-            </Link>
-          </div>
+      {/* Слайдер */}
+      <div className="relative w-full mx-auto h-[400px] overflow-hidden rounded-lg shadow-lg m-8 group">
+        {/* Фото для слайдера */}
+        <div
+          className="w-full h-full flex transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {sliderImages.map((img, index) => (
+            <img
+              key={index}
+              src={img.img}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover flex-shrink-0"
+            />
+          ))}
         </div>
-      </section>
+        <button
+          onClick={goToPrevious}
+          className="absolute top-1/2 left-4 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 shadow-md flex items-center justify-center hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+          aria-label="Previous image"
+        >
+          <ChevronLeft className="w-6 h-6 text-gray-800" />
+        </button>
+        <button
+          onClick={goToNext}
+          className="absolute top-1/2 right-4 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 shadow-md flex items-center justify-center hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+          aria-label="Next image"
+        >
+          <ChevronRight className="w-6 h-6 text-gray-800" />
+        </button>
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+          {sliderImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? "bg-white" : "bg-white/50"
+              } transition-colors`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
 
       {/* Product categories section */}
       <section>
@@ -53,6 +92,11 @@ export default function HomePage() {
     </div>
   )
 }
+
+const sliderImages = [
+  {img: "/images/slider1.jpg", index: "0"},
+  {img: "/images/slider2.jpg", index: "1"}
+]
 
 const categories = [
   { id: 'computers', name: 'Комп\'ютери', image: "/images/computers.png" },
